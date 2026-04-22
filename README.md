@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3 - Starter
 
-Webpage: https://snorlax7355.github.io/CSE110_Lab2/
+Webpage: https://snorlax7355.github.io/sp26-cse110-lab3/

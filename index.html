@@ -4,19 +4,150 @@
     <title>9 + 10 Team Meeting</title>
     <meta charset="UTF-8"/>
     <link rel="icon" href="images/logo-badge.png" type="image/png"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <style>
+      * { /* font for whole page */
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      :root {
+        --main-color: rgb(100, 150, 255);
+      }
+
+      body {
+        background-color: #f0f0f0;
+        color: var(--main-color, blue); /* variable + fallback */
+        font-size: 1rem;
+      }
+
+      header {
+        background: hsl(200, 50%, 80%);
+        color: color-mix(in srgb, blue 50%, white 50%);
+        text-align: center;
+      }
+
+      h1, h2 { /* selector list */
+        text-decoration: underline;
+      }
+
+      /* ===== Box Model ===== */
+      section {
+        margin-top: 2em;
+        margin-bottom: 2vh;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        padding: 10px 20px 10px 20px;
+
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        border-radius: 10px;
+      }
+
+      footer {
+        margin: auto;
+        padding: 1cm;
+        border: 1px solid black; /* shorthand */
+      }
+
+      /* ===== Display ===== */
+      span {
+        display: inline-block;
+      }
+
+      nav a {
+        display: block;
+      }
+
+      /* ===== Sizing ===== */
+      img {
+        width: 4in;
+        height: 200px;
+        max-width: 100%;
+        min-width: 100px;
+      }
+
+      /* ===== Position ===== */
+      header {
+        position: sticky;
+        top: 0;
+      }
+
+      footer {
+        position: relative;
+      }
+
+      /* ===== Pseudo-classes ===== */
+      a:hover {
+        color: red;
+      }
+
+      a:active {
+        color: green;
+      }
+
+      /* ===== Flexbox ===== */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* ===== Grid ===== */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
+      }
+
+      /* ===== Selectors ===== */
+      .highlight { color: orange; } /* class */
+      #main-title { color: purple; } /* id */
+
+      input[type="text"] { border: 2px solid blue; } /* attribute */
+
+      section p { color: black; } /* descendant */
+      section > h2 { color: darkblue; } /* child */
+      h2 + h3 { color: teal; } /* adjacent sibling */
+      h2 ~ p { font-style: italic; } /* general sibling */
+
+      div.highlight { background: lightyellow; } /* combining */
+
+      /* New selector :has() */
+      section:has(img) {
+        background-color: rgba(200,200,255,0.3);
+      }
+
+      /* Nested selector (modern CSS) */
+      section h3 {
+        color: brown;
+      }
+
+      /* ===== Responsiveness ===== */
+      @media (max-width: 600px) {
+        body {
+          background-color: lightpink;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <main>
       <header>
-        <h1><b>9 + 10 Team Meeting</b></h1>
+        <h1 id="main-title"><b>9 + 10 Team Meeting</b></h1>
         <h2> Meeting Overview </h2>
         <i>Saturday 8:00 PM, 4/11/26</i>
       </header>
       <hr>
       <hr>
-      <section>
+      <section class="grid-container">
         <h1> Agenda </h1>
-        <div>
+        <div class="highlight">
           <ol>
             <li> Attedance </li>
             <li> Team Rules </li>
@@ -25,6 +156,7 @@
             <li> Warmup Project </li>
           </ol>
         </div>
+        <div> Extra Stuff </div>
       </section>
       <hr>
       <span>
@@ -126,6 +258,7 @@
         <nav>
           <a href="https://github.com/cse110-sp26-group21">Team GitHub Organization</a>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Special Secret</a>
+          <a href="https://canvas.ucsd.edu/courses/74253/assignments/1125116">Lab 3 Assignment</a>
         </nav>
       </footer>
     </main>
